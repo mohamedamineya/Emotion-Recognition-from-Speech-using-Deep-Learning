@@ -1,0 +1,8 @@
+librosa
+numpy
+pandas
+flask
+torch
+torchvision
+opencv-python
+uuid

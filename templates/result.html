@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Emotion Detection Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            text-align: center;
+            padding: 50px;
+        }
+        .result-box {
+            background: #fff;
+            padding: 40px;
+            margin: auto;
+            display: inline-block;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .emotion {
+            font-size: 2em;
+            color: #333;
+        }
+        .error {
+            color: red;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-box">
+        {% if emotion %}
+            <p class="emotion">Detected Emotion: <strong>{{ emotion }}</strong></p>
+        {% elif error %}
+            <p class="error">Error: {{ error }}</p>
+        {% else %}
+            <p>No result to display.</p>
+        {% endif %}
+        <a href="/" class="btn">Go back</a>
+    </div>
+    
+</body>
+</html>
